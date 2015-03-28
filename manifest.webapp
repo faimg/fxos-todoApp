@@ -1,0 +1,15 @@
+{
+  "version": "0.1",
+  "name": "App Name",
+  "launch_path": "/index.html",
+  "description": "Description",
+  "icons": {
+    "128": "/images/icon.png"
+  },
+  "developer": {
+    "name": "Author Name",
+    "url": ""
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en"
+}
