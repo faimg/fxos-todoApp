@@ -39,7 +39,7 @@ section[role="region"] > header:first-child > a {
 }
 
 section[role="region"] > header:first-child h1 {
-  margin-left: 5rem;
+  margin-left: 2.5rem;
 }
 
 /* Hide anchor to change target */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="todoApp">
 <head>
 
 <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/cross_browser.css">
 <link rel="stylesheet" href="css/drawer.css">
 <link rel="stylesheet" href="css/style.css">
-<title>App Name</title>
+<title>TODO App List</title>
 
 </head>
 <body>
@@ -20,17 +20,38 @@
 <section id="index" data-position="current">
   <section id="drawer" role="region">
     <header class="fixed">
-      <h1>App Name</h1>
+      <h1>TODO App List</h1>
     </header>
-    <article class="content scrollable header">
-	
-   	<!-- START YOUR APP HERE -->          
+    <article 
+     class="content scrollable header"
+     ng-controller="TodoController"
+     ng-init="retrieve()">
+		
+		<input id="task-field" ng-model="description" type="text" />
+		<button ng-click="addTask()">Add</button>
+   
+    <p>
+    	<span ng-bind="remaining()">0</span> of
+    	<span>{{tasks.length}}</span> remaing
+    	[ <a href="#" ng-click="archive()">archive</a> ]
+    </p> 	          
+    
+    <ul>
+    	<li ng-repeat="task in tasks">
+    		<label ng-click="save()">
+    			<input ng-model="task.done" type="checkbox" />
+    			<span>{{task.description}}</span>
+    		</label>
+    	</li>
+    </ul>
     
     </article>
   </section>
 </section>
 
 <script src="js/vendor/angular.min.js"></script>
+<script src="js/todoApp.js"></script>
+<script src="js/controllers/TodoController.js"></script>
 
 </body>
 </html>

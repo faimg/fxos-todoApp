@@ -1,14 +1,14 @@
 {
   "version": "0.1",
-  "name": "App Name",
+  "name": "TODO App List",
   "launch_path": "/index.html",
-  "description": "Description",
+  "description": "A list of task to do",
   "icons": {
     "128": "/images/icon.png"
   },
   "developer": {
-    "name": "Author Name",
-    "url": ""
+    "name": "Edy Segura",
+    "url": "http://edysegura.com"
   },
   "installs_allowed_from": ["*"],
   "default_locale": "en"
